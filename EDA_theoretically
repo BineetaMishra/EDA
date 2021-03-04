@@ -50,6 +50,11 @@ Check whether the activity was succesfull and Duplicate records are moved.
 STEP3:-> Handling Outlier:-
 -------------------------------
 
+There are two types of outliers:
+Univariate outliers: Univariate outliers are the data points whose values lie beyond the range of expected values based on one variable.
+
+Multivariate outliers: While plotting data, some values of one variable may not lie beyond the expected range, but when you plot the data with some other variable, these values may lie far from the expected value.
+
 Outliers, being the most extreme observations, may include the sample maximum or sample minimum, or both, depending on whether they are extremely high or low. However, the sample maximum and minimum are not always outliers because they may not be unusually far from other observations.
 
 We Generally identify outliers with the help of boxplot.
