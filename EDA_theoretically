@@ -1,0 +1,109 @@
+Exploratory Data Analysis(EDA): Exploratory data analysis is a complement to inferential statistics.
+EDA involves:-
+1.looking at and describing the dataset.
+2.Summarizing the dataset.
+
+Data Analysis: Data Analysis is the statistics and probability to figure out trends in the data set. It is used to show historical data by using some analytics tools. It helps in drilling down the information, to transform metrics, facts, and figures into initiatives for improvement.
+
+The major steps to be covered for EDA are below:
+
+1. Handle Missing value
+2. Removing duplicates
+3. Outlier Treatment
+4. Normalizing and Scaling( Numerical Variables)
+5. Encoding Categorical variables( Dummy Variables)
+6. Bivariate Analysis
+
+----------------------------
+Basic Data Exploration     |
+----------------------------
+In this step, we will perform the below operations to check what the data set comprises of. We will check the below things:
+
+– head of the dataset--> df.head() ---->  <The head function will tell you the top records in the data set.>
+– the shape of the dataset---> df.shape() ----><number of observations and variables we have in the data set.Check the dimension of data>
+– info of the dataset--> df.info()  ------> <information about the dataset.>
+– summary of the dataset---> df.describe()----> <Central Tendency Measure of df like Mean, Median, Mode, Max, Min,Std dev><6 point summary>
+
+------------------------
+STEP1:-> Handling missing value:
+-------------------------
+
+There are various technique to handle the missing values in the dataset. The decision to which technique should be used depends on the dataset.
+
+Some of the techniques are:
+    a) Drop the missing values--->In case there are very few missing values you can drop those values.
+    b) Drop the missing value columns---->In case there are too many missing values you can drop those columns.
+    c) Impute with mean value--->For numerical column,replace the missing values with mean values. DO NOT DO IF OUTLIERS PRESENT.
+    d) Impute with median value---> For numerical column,replace the missing values with median values.WILL NOT GET EFFECTED BY OUTLIERS. 
+    e) Impute with mode value: For the categorical column,replace the missing values with mode values i.e the frequent ones.
+    f) Prediction of missing values. by making it the dependent variable. Predictive Analysis. 
+
+
+-------------------------------
+STEP2:-> Handling Duplicate records:-
+--------------------------------
+
+After removing the duplicate values from the data set we get only distinct records.
+Check whether the activity was succesfull and Duplicate records are moved.
+
+-------------------------------
+STEP3:-> Handling Outlier:-
+-------------------------------
+
+Outliers, being the most extreme observations, may include the sample maximum or sample minimum, or both, depending on whether they are extremely high or low. However, the sample maximum and minimum are not always outliers because they may not be unusually far from other observations.
+
+We Generally identify outliers with the help of boxplot.
+The following are the ways for treating outliers:
+
+        1. Drop the outlier value       2.Replace the outlier value using the IQR
+
+
+---------------------------------------------
+STEP4:-> Normalizing and Scaling
+-----------------------------------------------
+
+Often the variables of the dataset are of different scales i.e. one variable is in millions and other can be in only 100.
+
+Feature scaling (also known as data normalization) is the method used to standardize the range of features of data. Since the range of values of data may vary widely, it becomes a necessary step in data preprocessing while using machine learning algorithms.
+
+In this method, we convert variables with different scales of measurements into a single scale. 
+StandardScaler normalizes the data. We will be doing this only for the numerical variables.
+
+---------------------------------
+STEP5:-> ENCODING
+---------------------------------
+
+One-Hot-Encoding is used to create dummy variables to replace the categories in a categorical variable into features of each category and represent it using 1 or 0 based on the presence or absence of the categorical value in the record.
+
+This is required to do since the machine learning algorithms only work on the numerical data. That is why there is a need to convert the categorical column into a numerical one.
+
+get_dummies is the method that creates a dummy variable for each categorical variable.
+
+
+----------------------------------------------------------------------
+STEP6:-> Bivariate Analysis:- This means analyzing 2 variables.
+------------------------------------------------------------------------
+
+Variables can either be Numerical or Categorical. There is a specific way of analyzing these variables as shown below:
+
+Numerical vs. Numerical
+1. Scatterplot
+2. Line plot
+3. Heatmap for correlation
+4. Joint plot
+
+Categorical vs. Numerical
+1. Bar chart
+2. Violin plot
+3. Categorical box plot
+4.Swarm plot
+
+Two Categorical Variables
+1. Bar chart
+2. Grouped bar chart
+3. Point plot
+
+----------------------------------------
+To find the correlation- df.corr()
+---------------------------------------
+
