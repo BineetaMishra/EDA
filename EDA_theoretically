@@ -1,3 +1,7 @@
+                     |-----------------------|
+                     |      EDA              |
+                      ------------------------   
+
 Exploratory Data Analysis(EDA): Exploratory data analysis is a complement to inferential statistics.
 EDA involves:-
 1.looking at and describing the dataset.
@@ -51,16 +55,25 @@ STEP3:-> Handling Outlier:-
 -------------------------------
 
 There are two types of outliers:
-Univariate outliers: Univariate outliers are the data points whose values lie beyond the range of expected values based on one variable.
-
-Multivariate outliers: While plotting data, some values of one variable may not lie beyond the expected range, but when you plot the data with some other variable, these values may lie far from the expected value.
+    --->Univariate outliers: Univariate outliers are the data points whose values lie beyond the range of expected values based on one variable.
+    --->Multivariate outliers: While plotting data, some values of one variable may not lie beyond the expected range, but when you plot the data with some other variable, these values may lie far from the expected value.
 
 Outliers, being the most extreme observations, may include the sample maximum or sample minimum, or both, depending on whether they are extremely high or low. However, the sample maximum and minimum are not always outliers because they may not be unusually far from other observations.
 
-We Generally identify outliers with the help of boxplot.
-The following are the ways for treating outliers:
+The choice for the approach of handling outliers depends on 2 MAJOR Factors:-
+     ---> Understand the business case well.
+    --->  Look at the Quantile ditribution. This will tell about the nature of distribution of data.
 
-        1. Drop the outlier value       2.Replace the outlier value using the IQR
+We Generally identify outliers with the help of BOXPLOT.
+
+The following are the ways for treating outliers:
+    --->Drop the outlier value       
+    --->Replace the outlier value using the IQR
+        
+Please Note:-> Check the distribution of the data. It there is a Normal Distribution only then use Z-Score Method or IQR method.
+But, if it is a skewed distribution then Z-Score or IQR approach might not help.
+
+For ASYMMETRIC DISTRIBUTION:- look at the 1st and 3rd Quantile and then remove accordingly.
 
 
 ---------------------------------------------
@@ -111,4 +124,10 @@ Two Categorical Variables
 ----------------------------------------
 To find the correlation- df.corr()
 ---------------------------------------
+
+----------------------------------------------------------------------
+STEP7:-> Multivariate Analysis:- This means analyzing all variables at ine time.
+------------------------------------------------------------------------
+1. Joint plot
+2. Heat Map
 
